@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NewWriteProcessing">ОбработкаЗаписиНового</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Читатель" id="7">
+			<DataPath>Объект.Читатель</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ЧитательКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ЧитательРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Библиотекарь" id="10">
+			<DataPath>Объект.Библиотекарь</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="БиблиотекарьКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="БиблиотекарьРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ДолженБылВернутьДо" id="41">
+			<DataPath>Объект.ДолженБылВернутьДо</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДолженБылВернутьДоКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="ДолженБылВернутьДоРасширеннаяПодсказка" id="43"/>
+		</InputField>
+		<InputField name="ДатаВыдачи" id="13">
+			<DataPath>Объект.ДатаВыдачи</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаВыдачиКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ДатаВыдачиРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<Table name="Книги" id="19">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Книги</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КнигиКонтекстноеМеню" id="20"/>
+			<AutoCommandBar name="КнигиКоманднаяПанель" id="21"/>
+			<ExtendedTooltip name="КнигиРасширеннаяПодсказка" id="22"/>
+			<SearchStringAddition name="КнигиСтрокаПоиска" id="23">
+				<AdditionSource>
+					<Item>Книги</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КнигиСтрокаПоискаКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="КнигиСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КнигиСостояниеПросмотра" id="26">
+				<AdditionSource>
+					<Item>Книги</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КнигиСостояниеПросмотраКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="КнигиСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КнигиУправлениеПоиском" id="29">
+				<AdditionSource>
+					<Item>Книги</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КнигиУправлениеПоискомКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="КнигиУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnStartEdit">КнигиПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="КнигиНомерСтроки" id="32">
+					<DataPath>Объект.Книги.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КнигиНомерСтрокиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="КнигиНомерСтрокиРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<InputField name="КнигиКнига" id="35">
+					<DataPath>Объект.Книги.Книга</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="КнигиКнигаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="КнигиКнигаРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="КнигиКоличество" id="38">
+					<DataPath>Объект.Книги.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="КнигиКоличествоКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="КнигиКоличествоРасширеннаяПодсказка" id="40"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ВозвратКниги</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

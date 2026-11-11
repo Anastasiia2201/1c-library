@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<DocumentJournal uuid="d24ca067-3ba2-4ff4-b9e6-158fc151c13d">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentJournalSelection.ДокументыУчетаКниг" category="Selection">
+				<xr:TypeId>677b1deb-2183-4aea-a5b4-599fa9c4c145</xr:TypeId>
+				<xr:ValueId>02541f7d-99af-4192-a60d-af712b47d2b5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalList.ДокументыУчетаКниг" category="List">
+				<xr:TypeId>d9c7d669-f24e-43b7-8fb7-87e28bdbaf0f</xr:TypeId>
+				<xr:ValueId>ce37fadf-eb2b-43f5-9271-e319a901d015</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalManager.ДокументыУчетаКниг" category="Manager">
+				<xr:TypeId>4a05f690-8b2a-475f-90b2-c9fb5e15c23b</xr:TypeId>
+				<xr:ValueId>39634ae0-9fea-41ad-9849-0102cf820f13</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ДокументыУчетаКниг</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы учета книг</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DefaultForm>DocumentJournal.ДокументыУчетаКниг.Form.ФормаСписка</DefaultForm>
+			<AuxiliaryForm/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<RegisteredDocuments>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВыдачаКниги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратКниги</xr:Item>
+			</RegisteredDocuments>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Column uuid="757d9e83-97f4-4c70-9937-8e5677d6662d">
+				<Properties>
+					<Name>Читатель</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Читатель</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВыдачаКниги.Attribute.Читатель</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратКниги.Attribute.Читатель</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Form>ФормаСписка</Form>
+		</ChildObjects>
+	</DocumentJournal>
+</MetaDataObject>
